@@ -17,7 +17,7 @@
   --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
-  --animate-meteor: meteor 5s linear infinite;
+  --animate-meteor: meteor 0.5s linear infinite;
 
   @keyframes float {
     0%,
@@ -34,7 +34,7 @@
       opacity: 1;
     }
     50% {
-      opacity: 0.2;
+      opacity: 0.5;
     }
   }
   @keyframes fade-in {
@@ -53,13 +53,14 @@
       opacity: 1;
     }
     70% {
-      opacity: 1;
+      opacity: 0.5;
     }
     100% {
-      transform: rotate(215deg) translateX (-500px);
+      transform: rotate(215deg) translateX(-10000px);
       opacity: 0;
     }
   } 
+
 }
 
 @layer base {
@@ -156,11 +157,27 @@
   box-shadow: 0 0 10px 2px hsl(var(--star-glow));
 }
 
-@utility meteor {
+/* @utility meteor-dark {
   @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
   box-shadow: 0 0 10px 5 px rgba(255, 255, 255, 0.3)
 }
 
+@utility meteor-light {
+  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
+  box-shadow: 0 0 10px 5 px rgba(255, 255, 255, 0.3)
+} */
+ 
+@utility meteor {
+  @apply absolute rounded-full;
+  background: linear-gradient(
+    to right,
+    hsl(var(--star-color)),
+    hsl(var(--star-color)),
+    transparent
+  );
+  box-shadow: 0 0 10px 5px hsl(var(--star-glow-color));
+  animation: var(--animate-meteor);
+}
 #root {
   max-width: 100%;
   margin: 0 auto;
