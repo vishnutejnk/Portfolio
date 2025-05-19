@@ -1,6 +1,7 @@
 import { ThemeToggle } from "@/Components/ThemeToggle";
 import { StarBackground } from "@/Components/StarBackground"
 import { useEffect, useState } from "react";
+import { NavBar } from "../Components/NavBar";
 
 export const Home = () => {
 
@@ -35,7 +36,7 @@ export const Home = () => {
         {/* Background Effects */}
         <StarBackground isDarkMode={isDarkMode}/>
         {/* Navbar */}
-        
+        {<NavBar/>}
         {/* Main Content */}
 
         {/* Footer */}

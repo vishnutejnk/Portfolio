@@ -1,5 +1,6 @@
 import { Sun, Moon  } from "lucide-react";
 import { cn } from "../lib/utils";
+import { useEffect } from "react";
 
 
 interface ThemeToggleProps {
@@ -8,6 +9,10 @@ interface ThemeToggleProps {
   }
 
 export const ThemeToggle = ({isDarkMode, toggleTheme}: ThemeToggleProps) => {
+    useEffect(() => {
+            
+    
+    }, [])
     return (
         <button 
             onClick={toggleTheme} 
