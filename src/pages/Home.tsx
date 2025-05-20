@@ -3,6 +3,7 @@ import { StarBackground } from "@/Components/StarBackground"
 import { useEffect, useState } from "react";
 import { NavBar } from "../Components/NavBar";
 import { HeroSection } from "../Components/HeroSection";
+import { AboutMeSection } from "../Components/AboutMeSection";
 
 export const Home = () => {
 
@@ -39,8 +40,9 @@ export const Home = () => {
         {/* Navbar */}
         {<NavBar/>}
         {/* Main Content */}
-        <main>
+        <main className="scroll-snap-parent">
             <HeroSection/>
+            <AboutMeSection/>
         </main>
         {/* Footer */}
     </div>
