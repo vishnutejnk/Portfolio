@@ -2,6 +2,7 @@ import { ThemeToggle } from "@/Components/ThemeToggle";
 import { StarBackground } from "@/Components/StarBackground"
 import { useEffect, useState } from "react";
 import { NavBar } from "../Components/NavBar";
+import { HeroSection } from "../Components/HeroSection";
 
 export const Home = () => {
 
@@ -38,7 +39,9 @@ export const Home = () => {
         {/* Navbar */}
         {<NavBar/>}
         {/* Main Content */}
-
+        <main>
+            <HeroSection/>
+        </main>
         {/* Footer */}
     </div>
 }
