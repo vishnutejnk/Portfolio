@@ -18,7 +18,17 @@
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
   --animate-meteor: meteor 0.5s linear infinite;
+  --animate-scroll-left: scroll-left linear infinite;
+  --animate-scroll-right: scroll-right linear infinite;
 
+  @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-400%); }
+  }
+  @keyframes scroll-right {
+      0% { transform: translateX(-400%); }
+      100% { transform: translateX(0); }
+  }
   @keyframes float {
     0%,
     100% {
@@ -62,7 +72,9 @@
   } 
 
 }
-
+.carousel-track:hover {
+  animation-play-state: paused;
+}
 @layer base {
   :root {
     --background: 210 40% 98%;
@@ -135,6 +147,11 @@
 
 @utility card-hover {
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+   &:hover {
+        @media (hover: hover) {
+            border-color: var(--primary)
+        }
+    }
 }
 
 @utility gradient-border {
@@ -157,15 +174,6 @@
   box-shadow: 0 0 10px 2px hsl(var(--star-glow));
 }
 
-/* @utility meteor-dark {
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
-  box-shadow: 0 0 10px 5 px rgba(255, 255, 255, 0.3)
-}
-
-@utility meteor-light {
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
-  box-shadow: 0 0 10px 5 px rgba(255, 255, 255, 0.3)
-} */
  
 @utility meteor {
   @apply absolute rounded-full;
