@@ -30,6 +30,8 @@ import {
   SiMongodb,
   SiPostgresql
 } from "react-icons/si";
+import { TbSql } from "react-icons/tb";
+import {IbmDb2Alt} from "@carbon/icons-react"
 
 import { TbApi } from "react-icons/tb"; // For RESTful APIs
 const allSkills = [
@@ -63,10 +65,10 @@ const allSkills = [
   {
     category: "Data-Base",
     skills: [
-      { name: "SQL Server", level: 90, icon: FaDatabase },
+      { name: "SQL Server", level: 90, icon: TbSql },
       { name: "MongoDB", level: 90, icon: SiMongodb },
       { name: "PostgreSQL", level: 90, icon: SiPostgresql },
-      { name: "IBM DB2", level: 90, icon: FaDatabase }
+      { name: "IBM DB2", level: 90, icon: IbmDb2Alt }
     ]
   },
   {
@@ -127,7 +129,7 @@ export const SkillsSection = () => {
                                             )}
                                         >
                                             <div className="flex flex-col items-center mb-2 md:mb-4 md:flex-row pt-4">
-                                                <skill.icon className="text-primary text-2xl mb-2 md:mb-0 md:mr-3" />
+                                                <skill.icon size="24" className="text-primary text-2xl mb-2 md:mb-0 md:mr-3" />
                                                 <h3 className="hidden md:block font-semibold text-lg">{skill.name}</h3>
                                             </div>
                                             <div className="flex flex-col md:flex-row md:items-center items-center mb-2">
