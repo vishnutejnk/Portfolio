@@ -100,7 +100,11 @@ export const SkillsSection = () => {
                         <div key={index} className="grid grid-cols-[15%_85%] gap-6 mb-12">
                             {/* Category Label */}
                             <div className="flex items-center">
-                                <h3 className="text-lg font-semibold capitalize text-foreground">
+                                <h3 className={cn(
+                                    "text-lg font-semibold capitalize text-foreground",
+                                    "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                                    "bg-primary text-primary-foreground"
+                                )}>
                                     {skillsByCategory.category}
                                 </h3>
                             </div>
