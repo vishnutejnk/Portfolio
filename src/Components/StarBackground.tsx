@@ -19,12 +19,8 @@ interface Meteor {
   delay: number;
   animationDuration: number;
 }
-interface StarBackgroundProps {
-  isDarkMode: boolean;
-}
 
-
-export const StarBackground = ({isDarkMode}: StarBackgroundProps) => {
+export const StarBackground = () => {
 
   const [stars, setStars] = useState<Star[]>([]);
   const [meteors, setMeteors] = useState<Meteor[]>([]);
@@ -39,22 +35,11 @@ export const StarBackground = ({isDarkMode}: StarBackgroundProps) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
-
-
-
-
-
-
-
-
   const generateStars = () => {
     const numberOfStars = Math.floor(
       (window.innerWidth * window.innerHeight) / 10000
     );
-
     const newStars: Star[] = [];
-
     for (let i = 0; i < numberOfStars; i++) {
       newStars.push({
         id: i,
@@ -67,13 +52,12 @@ export const StarBackground = ({isDarkMode}: StarBackgroundProps) => {
     }
     setStars(newStars);
   };
-const generateMeteors = () => {
+  
+  const generateMeteors = () => {
     const numberOfMeteors = Math.floor(
       (window.innerWidth * window.innerHeight) / 130000
     );
-
     const newMeteors: Meteor[] = [];
-
     for (let i = 0; i < numberOfMeteors; i++) {
       newMeteors.push({
         id: i,
@@ -86,36 +70,41 @@ const generateMeteors = () => {
     }
     setMeteors(newMeteors);
   };
+
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        {stars.map((star) => (
-          <div
+    <div>
+      
+
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+          {stars.map((star) => (
+            <div
             key={star.id}
-            className="star animate-pulse-subtle"
-            style={{
+              className="star animate-pulse-subtle"
+              style={{
                 width: star.size + "px",
                 height: star.size + "px",
                 left: star.x + "%",
                 top: star.y + "%",
                 opacity: star.opacity,
                 animationDuration: star.animationDuration + "s",
-            }}
-          />
-        ))}
-        {meteors.map((meteor) => (
-          <div
+              }}
+              />
+            ))}
+          {meteors.map((meteor) => (
+            <div
             key={meteor.id}
             className={cn("meteor")}
             style={{
-            width: meteor.size * 50 + "px",
-            height: meteor.size * 1.5 + "px",
-            left: meteor.x + "%",
-            top: meteor.y + "%",
-            animationDelay: meteor.delay + "",
-            animationDuration: meteor.animationDuration + "s",
+              width: meteor.size * 50 + "px",
+              height: meteor.size * 1.5 + "px",
+              left: meteor.x + "%",
+              top: meteor.y + "%",
+              animationDelay: meteor.delay + "",
+              animationDuration: meteor.animationDuration + "s",
             }}
-          />
-        ))}
+            />
+          ))}
+      </div>
     </div>
   );
 };

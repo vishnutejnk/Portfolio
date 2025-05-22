@@ -6,18 +6,16 @@ import { useEffect } from "react";
 interface ThemeToggleProps {
     isDarkMode: boolean;
     toggleTheme: () => void;
-  }
+}
 
 export const ThemeToggle = ({isDarkMode, toggleTheme}: ThemeToggleProps) => {
     useEffect(() => {
-            
-    
     }, [])
     return (
         <button 
             onClick={toggleTheme} 
             className={
-                cn("fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+                cn("relative z-50 md:pl-8 md:py-0 p-2 rounded-full transition-colors duration-300",
                 "focus:outlin-hidden")
                 }
             >

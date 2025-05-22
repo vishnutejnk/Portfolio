@@ -1,5 +1,4 @@
-import { ThemeToggle } from "@/Components/ThemeToggle";
-import { StarBackground } from "@/Components/StarBackground"
+import { StarBackground } from "../Components/StarBackground"
 import { useEffect, useState } from "react";
 import { NavBar } from "../Components/NavBar";
 import { HeroSection } from "../Components/HeroSection";
@@ -34,12 +33,10 @@ export const Home = () => {
     };
 
     return <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-        {/* Theme toggle */}
-        <ThemeToggle toggleTheme={toggleTheme} isDarkMode={isDarkMode}/>
         {/* Background Effects */}
-        <StarBackground isDarkMode={isDarkMode}/>
+        <StarBackground/>
         {/* Navbar */}
-        {<NavBar/>}
+        {<NavBar  toggleTheme={toggleTheme} isDarkMode={isDarkMode}/>}
         {/* Main Content */}
         <main className="scroll-snap-parent">
             <HeroSection/>
