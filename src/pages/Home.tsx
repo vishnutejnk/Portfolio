@@ -4,6 +4,8 @@ import { NavBar } from "../Components/NavBar";
 import { HeroSection } from "../Components/HeroSection";
 import { AboutMeSection } from "../Components/AboutMeSection";
 import { SkillsSection } from "../Components/SkillsSection";
+import { ProjectsSection } from "../Components/ProjectsSection";
+import { ContactSection } from "../Components/ContactSection";
 
 export const Home = () => {
 
@@ -42,6 +44,8 @@ export const Home = () => {
             <HeroSection/>
             <AboutMeSection/>
             <SkillsSection/>
+            <ProjectsSection/>
+            <ContactSection/>
         </main>
         {/* Footer */}
     </div>
