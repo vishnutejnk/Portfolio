@@ -1,4 +1,4 @@
-import { Mail, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useState } from "react";
 import { FaDiscord, FaInstagram, FaLinkedin } from "react-icons/fa";
 
