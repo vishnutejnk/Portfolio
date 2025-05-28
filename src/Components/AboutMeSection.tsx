@@ -21,7 +21,10 @@ export const AboutMeSection = () => {
                             <a href="#contact" className="special-button"> 
                                 Get In Touch
                             </a>
-                            <a href="" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
+                            <a className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+                                href="/VishnuTejNandaKumar.pdf"
+                                download
+                                target="_blank">
                                 Download CV
                             </a>
                         </div>
