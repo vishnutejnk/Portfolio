@@ -69,12 +69,13 @@
       transform: rotate(215deg) translateX(-10000px);
       opacity: 0;
     }
-  } 
-
+  }
 }
+
 .carousel-track:hover {
   animation-play-state: paused;
 }
+
 @layer base {
   :root {
     --background: 210 40% 98%;
@@ -87,7 +88,7 @@
 
     --border: 214 32% 91%;
 
-    --star-color: 0 0% 0%; /* balck in light mode */
+    --star-color: 0 0% 0%; /* black in light mode */
     --star-glow: 0 0% 30%;
   }
 
@@ -127,7 +128,7 @@
     max-width: 640px;
   }
   @media (width >= 768px) {
-    max-width: 768 px;
+    max-width: 768px;
   }
   @media (width >= 1024px) {
     max-width: 1024px;
@@ -147,18 +148,20 @@
 
 @utility card-hover {
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
-   &:hover {
-        @media (hover: hover) {
-            border-color: var(--primary)
-        }
+  &:hover {
+    @media (hover: hover) {
+      border-color: var(--primary);
     }
+  }
 }
 
 @utility gradient-border {
-  @apply relative rounded-md;
+  @apply relative rounded-md overflow-hidden;
   background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
   background-clip: padding-box;
   border: 1px solid transparent;
+  min-height: 100%; /* Ensure full height coverage */
+  height: auto; /* Allow content to dictate height */
 }
 
 @utility special-button {
@@ -167,14 +170,12 @@
           hover:scale-105 active:scale-95;
 }
 
-
 @utility star {
   @apply absolute rounded-full;
   background-color: hsl(var(--star-color));
   box-shadow: 0 0 10px 2px hsl(var(--star-glow));
 }
 
- 
 @utility meteor {
   @apply absolute rounded-full;
   background: linear-gradient(
@@ -186,6 +187,7 @@
   box-shadow: 0 0 10px 5px hsl(var(--star-glow-color));
   animation: var(--animate-meteor);
 }
+
 #root {
   max-width: 100%;
   margin: 0 auto;
