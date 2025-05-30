@@ -1,4 +1,4 @@
-import { Briefcase, Code, User, GraduationCap } from "lucide-react";
+import { Briefcase, GraduationCap } from "lucide-react";
 import { useState } from "react";
 import { FaCanadianMapleLeaf } from "react-icons/fa";
 
@@ -107,7 +107,8 @@ export const AboutMeSection = () => {
 												Canada Revenue Agency
 											</h4>
 											<p className="text-muted-foreground">
-												Software Developer Analyst (15 months)
+												Software Developer Analyst (15
+												months)
 											</p>
 										</div>
 									</div>
@@ -218,7 +219,8 @@ export const AboutMeSection = () => {
 												Canada Revenue Agency
 											</h4>
 											<p className="text-muted-foreground">
-												Software Developer Analyst (15 months)
+												Software Developer Analyst (15
+												months)
 											</p>
 										</div>
 									</div>
