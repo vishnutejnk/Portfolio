@@ -7,7 +7,7 @@ const navItems = [
 	{ name: "Home", href: "#hero" },
 	{ name: "About", href: "#about" },
 	{ name: "Skills", href: "#skills" },
-	// {name: "Projects", href: "#projects"},
+	// { name: "Projects", href: "#projects" },
 	{ name: "Contact", href: "#contact" },
 ];
 
@@ -41,7 +41,6 @@ export const NavBar = ({ isDarkMode, toggleTheme }: ThemeToggleProps) => {
 					href="#hero">
 					<span className="relative z-10">
 						<span className="text-glow text-foreground">
-							{" "}
 							Vishnu's{" "}
 						</span>{" "}
 						Portfolio
@@ -68,7 +67,6 @@ export const NavBar = ({ isDarkMode, toggleTheme }: ThemeToggleProps) => {
 						className="md:hidden p-2 z-50 text-foreground"
 						aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}>
 						{isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-						{""}
 					</button>
 					<div
 						className={cn(
@@ -78,7 +76,7 @@ export const NavBar = ({ isDarkMode, toggleTheme }: ThemeToggleProps) => {
 								? "opacity-100 pointer-events-auto"
 								: "opacity-0 pointer-events-none"
 						)}>
-						<div className="flex flex-col  space-y-8 text-xl">
+						<div className="flex flex-col space-y-8 text-xl">
 							{navItems.map((item, key) => (
 								<a
 									key={key}
