@@ -87,7 +87,7 @@ const allSkills = [
 export const SkillsSection = () => {
 	return (
 		<section id="skills" className="py-24 px-4 relative">
-			<div className="container mx-auto max-w-7xl bg-card/60 p-2 md:p-20 rounded-lg">
+			<div className="container mx-auto max-w-7xl bg-card/60 p-2 md:px-10 md:py-6 rounded-lg">
 				<h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 md:mb-12 text-center text-glow">
 					My <span className="text-primary">Skills</span>
 				</h2>
@@ -97,7 +97,7 @@ export const SkillsSection = () => {
 					return (
 						<div
 							key={index}
-							className="md:grid md:grid-cols-[15%_85%] gap-6 mb-6 md:mb-12">
+							className="md:grid md:grid-cols-[13%_87%] mb-6 md:mb-10">
 							{/* Category Label */}
 							<div className="hidden md:flex items-center">
 								<h3
@@ -114,7 +114,7 @@ export const SkillsSection = () => {
 							<div className="overflow-hidden md:mx-6">
 								<div
 									className={cn(
-										"flex gap-6 carousel-track",
+										"flex gap-4 carousel-track",
 										index % 2 === 0
 											? "animate-scroll-left"
 											: "animate-scroll-right"
@@ -136,10 +136,10 @@ export const SkillsSection = () => {
 										<div
 											key={`${index}-${skillIndex}`}
 											className={cn(
-												"bg-card p-2 md:p-6 rounded-lg shadow-xs card-hover flex-shrink-0 w-16 md:w-48",
+												"bg-card p-2 md:p-4 rounded-lg shadow-xs card-hover flex-shrink-0 w-16 md:w-48",
 												"flex-col justify-center items-center"
 											)}>
-											<div className="flex flex-col items-center mb-2 md:mb-4 md:flex-row pt-4">
+											<div className="flex flex-col items-center mb-2 md:mb-4 md:flex-row pt-2">
 												<skill.icon
 													size="24"
 													className="text-primary text-2xl mb-2 md:mb-0 md:mr-3"

@@ -35,7 +35,7 @@ export const HeroSection = () => {
 						<a
 							href="https://github.com/vishnutejnk"
 							target="_blank"
-							className="special-button py-3">
+							className="special-button w-fit flex items-center mx-auto gap-2 py-2">
 							View My Work
 						</a>
 					</div>
