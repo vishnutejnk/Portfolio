@@ -20,11 +20,14 @@ export const NavBar = ({ isDarkMode, toggleTheme }: ThemeToggleProps) => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	useEffect(() => {
 		const handleScroll = () => {
-			setIsScrolled(window.screenY > 10);
-			window.addEventListener("scroll", handleScroll);
-			return () => window.removeEventListener("scroll", handleScroll);
+			setIsScrolled(window.scrollY > 10);
 		};
-	});
+		handleScroll();
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	return (

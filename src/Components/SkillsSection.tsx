@@ -33,6 +33,7 @@ import { TbSql } from "react-icons/tb";
 import { IbmDb2Alt } from "@carbon/icons-react";
 
 import { TbApi } from "react-icons/tb"; // For RESTful APIs
+import { ArrowDown } from "lucide-react";
 const allSkills = [
 	{
 		category: "Front-End",
@@ -86,7 +87,7 @@ const allSkills = [
 ];
 export const SkillsSection = () => {
 	return (
-		<section id="skills" className="py-24 px-4 relative">
+		<section id="skills" className="py-24 px-4 relative min-h-screen">
 			<div className="container mx-auto max-w-7xl bg-card/60 p-2 md:px-10 md:py-6 rounded-lg">
 				<h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 md:mb-12 text-center text-glow">
 					My <span className="text-primary">Skills</span>
@@ -97,7 +98,7 @@ export const SkillsSection = () => {
 					return (
 						<div
 							key={index}
-							className="md:grid md:grid-cols-[13%_87%] mb-6 md:mb-10">
+							className="md:grid md:grid-cols-[13%_87%] mb-4">
 							{/* Category Label */}
 							<div className="hidden md:flex items-center">
 								<h3
@@ -168,6 +169,16 @@ export const SkillsSection = () => {
 						</div>
 					);
 				})}
+			</div>
+			<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+				<a href="#contact">
+					<div className="flex flex-col items-center">
+						<span className="text-sm text-muted-foreground mb-2">
+							Scroll
+						</span>
+						<ArrowDown className="h-5 w-5 text-primary"></ArrowDown>
+					</div>
+				</a>
 			</div>
 		</section>
 	);

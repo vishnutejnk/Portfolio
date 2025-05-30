@@ -10,8 +10,8 @@ export const AboutMeSection = () => {
 	};
 
 	return (
-		<section id="about" className="py-24 px-4 relative">
-			<div className="container mx-auto max-w-6xl bg-card/60 p-2 md:p-10 rounded-lg mb-50">
+		<section id="about" className="py-24 px-4 relative min-h-screen">
+			<div className="container mx-auto max-w-6xl bg-card/60 p-2 md:p-10 rounded-lg">
 				<h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
 					About <span className="text-primary"> Me</span>
 				</h2>
@@ -51,6 +51,7 @@ export const AboutMeSection = () => {
 							</a>
 						</div>
 					</div>
+					
 
 					{/* Right Half - Tabs */}
 					<div className="relative min-h-[300px] pb-4">
@@ -247,11 +248,15 @@ export const AboutMeSection = () => {
 					</div>
 				</div>
 			</div>
-			<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-				<span className="text-sm text-muted-foreground mb-2">
-					Scroll
-				</span>
-				<ArrowDown className="h-5 w-5 text-primary"></ArrowDown>
+			<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+				<a href="#skills">
+					<div className="flex flex-col items-center">
+						<span className="text-sm text-muted-foreground mb-2">
+							Scroll
+						</span>
+						<ArrowDown className="h-5 w-5 text-primary"></ArrowDown>
+					</div>
+				</a>
 			</div>
 		</section>
 	);
