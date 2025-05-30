@@ -51,7 +51,6 @@ export const AboutMeSection = () => {
 							</a>
 						</div>
 					</div>
-					
 
 					{/* Right Half - Tabs */}
 					<div className="relative min-h-[300px] pb-4">
@@ -108,8 +107,8 @@ export const AboutMeSection = () => {
 												Canada Revenue Agency
 											</h4>
 											<p className="text-muted-foreground">
-												Software Developer Analyst (15
-												months)
+												Software Developer Analyst (1.3
+												years)
 											</p>
 										</div>
 									</div>

@@ -22,14 +22,12 @@ export const HeroSection = () => {
 						</span>
 					</h1>
 					<p className="text-md md:text-lg font-semibold text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-						Welcome to my portfolio! I’m Vishnu Tej, a passionate
-						Full Stack Developer with experience in crafting
-						responsive, scalable, and performant web applications.
-                        
-						My mission is to build seamless digital solutions that
-						solve real-world problems while delivering exceptional
-						user experiences. Let’s create something impactful
-						together!
+						Welcome to my portfolio! I’m, a passionate Full Stack
+						Developer with experience in crafting responsive,
+						scalable, and performant web applications. My mission is
+						to build seamless digital solutions that solve
+						real-world problems while delivering exceptional user
+						experiences. Let’s create something impactful together!
 					</p>
 					<div className="opacity-0 animate-fade-in-delay-4 pt-2 pb-4">
 						<a
