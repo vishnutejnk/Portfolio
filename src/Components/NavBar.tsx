@@ -35,8 +35,8 @@ export const NavBar = ({ isDarkMode, toggleTheme }: ThemeToggleProps) => {
 			className={cn(
 				"fixed w-full z-40 transition-all duration-300",
 				isScrolled
-					? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
-					: "py-5"
+                    ? "py-3 bg-background/90 shadow-xs"
+                    : "py-5"
 			)}>
 			<div className="pl-8 pr-4 flex items-center justify-between">
 				<a
@@ -73,7 +73,7 @@ export const NavBar = ({ isDarkMode, toggleTheme }: ThemeToggleProps) => {
 					</button>
 					<div
 						className={cn(
-							"fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
+							"fixed inset-0 bg-background/90 backdrop-blur-md z-40 flex flex-col items-center justify-center",
 							"transition-all duration-300 md:hidden",
 							isMenuOpen
 								? "opacity-100 pointer-events-auto"
